@@ -1,3 +1,11 @@
+
+
 h1 {
-    font-family: sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 4em;
+}
+
+.button__style {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2em;
 }
