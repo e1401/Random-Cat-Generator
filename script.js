@@ -12,58 +12,35 @@ DOM.search__button.addEventListener("click", e => {
 });
 
 
-let myHeaders = new Headers({
-    'Content-Type' : 'application/json',
-    'x-api-key' : '77393ee4e-fb65-4cb4-80cc-1f086c11a480',
-    
-});
 
-let req = new Request(catApiURL, {
-    method: 'GET',
-    headers: myHeaders,
-    mode: 'cors'
-});
+
 
 
 
 function fetchData() {
-    fetch(resq)
-    .then( (response)=>{
-        if(response.ok){
-            return response.json();
-        }else{
-            throw new Error('Kratos says: error');
-        }
-    })
-    .then( (jsonData) =>{
-        console.log(jsonData);
-        
-        
-    })
-    .catch( (err) =>{
-        console.log('ERROR:', err.message);
-    });
-}
-
-fetch(catApiURL)
+    fetch(catApiURL)
   .then(response => response.json())
   .then(data => {
     const catRandom = document.createElement('div')
     data.forEach(cat => {
        catRandom.innerHTML +=
        `
-       <ul>
-         <li>Name: ${cat.id}</li>
-         <li><img src=" ${cat.url}"</li>
+       
+       <div class="div__style">  
+         <img class="responsive__img" src=" ${cat.url}">
+        </div>
          
-         
-       </ul>
+      
        `
     })
 // This is where I would like my fetch request to be on the page
     document.body.append(catRandom)
   })
+  .catch(function(error) {
+    console.log('There has been a problem with your fetch operation: ', error.message)
+    })
 
+}
 
 //AFTER
 
@@ -101,6 +78,37 @@ fetch(catApiURL)
 
 // console.log(convert(fetchData))
 
-function generateImg(url) {
-	DOM.resultsContainer.innerHTML = `<img src="${cat.url}" alt="Random cat image">`
-};
+
+// function fetchData() {
+//     fetch(res)
+//     .then( (response)=>{
+//         if(response.ok){
+//             return response.json();
+//         }else{
+//             throw new Error('Kratos says: error');
+//         }
+//     })
+//     .then( (jsonData) =>{
+//         console.log(jsonData);
+        
+        
+//     })
+//     .catch( (err) =>{
+//         console.log('ERROR:', err.message);
+//     });
+// }
+
+
+// let myHeaders = new Headers({
+//     'Content-Type' : 'application/json',
+//     'x-api-key' : '77393ee4e-fb65-4cb4-80cc-1f086c11a480',
+    
+// });
+
+// let req = new Request(catApiURL, {
+//     method: 'GET',
+//     headers: myHeaders,
+//     mode: 'cors'
+// });
+
+
