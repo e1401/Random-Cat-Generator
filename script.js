@@ -1,5 +1,3 @@
-// const catApiURL = 'https://api.thecatapi.com/v1/images/search'; // cat Api endpoint;
-
 const catApiURL = 'https://api.thecatapi.com/v1/images/search?limit=10&order=Desc';
 
 const DOM = {
@@ -41,7 +39,7 @@ function fetchData() {
                         </div>
                     `
             })
-            // This is where I would like my fetch request to be on the page
+            // Fetch result content => here:
             
             document.body.append(catRandom)
            
