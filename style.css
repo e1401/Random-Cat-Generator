@@ -1,6 +1,10 @@
 
+.container {
+    display: flex; /* or inline-flex */
+    flex-direction: column;
+  }
 
-h1 {
+.header__title {
     font-family: 'Work Sans', sans-serif;
     font-size: 4em;
 }
@@ -8,4 +12,14 @@ h1 {
 .button__style {
     font-family: 'Work Sans', sans-serif;
     font-size: 2em;
+}
+
+
+.responsive__img {
+    width: 50vw;
+    height: auto;
+}
+
+.ul__style {
+    padding: 0;
 }
