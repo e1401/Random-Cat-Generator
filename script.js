@@ -10,11 +10,15 @@ const DOM = {
 DOM.search__button.addEventListener("click", e => {
 
     fetchData(catApiURL);
-    $( ".results" ).empty()
+    $(".results").empty()
 
 
 });
 
+// // Animation section start
+const element =  document.querySelector('.button__style')
+element.classList.add('animated', 'wobble')
+// Animation section end
 
 
 
@@ -29,7 +33,7 @@ function fetchData() {
                 document.createElement('div')
 
             catRandom.className = "results"
-            
+
 
             data.forEach(cat => {
                 catRandom.innerHTML +=
@@ -40,12 +44,12 @@ function fetchData() {
                     `
             })
             // Fetch result content => here:
-            
+
             document.body.append(catRandom)
-           
+
         })
         .catch(function (error) {
-            console.log('Kratos says - Boy, there is error in your fetch: ', error.message)
+            console.log('Kratos says - Boy, there is error with your fetch: ', error.message)
         })
 
 }

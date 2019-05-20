@@ -1,67 +1,21 @@
-
-
-@media screen and (max-width: 600px) {
-    .header {
-        align-items: center; 
-        margin: auto;
-    }
-    .header__title {
-        font-family: 'Work Sans', sans-serif;
-        font-size: 2.5em; 
-        width: 100%;
-        height: 100%;
-        text-align: center;
-    }
-    .responsive__img {
-        width: 100vw;
-        height: auto;
-    }
-
-    .button__style {
-        font-family: 'Work Sans', sans-serif;
-        font-size: 1.6em;
-        border-radius: 22px;
-        box-shadow: 5px 5px 5px #888888;
-        background-color: aqua;
-        border: 2px solid aqua;
-        
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    
-    .responsive__img {
-        width: 80vw;
-        height: auto;
-    }
-    .header__title {
-        font-family: 'Work Sans', sans-serif;
-        font-size: 2.5em; 
-        width: 100%;
-        height: 100%;
-        text-align: center;
-    }
-}
-  
-
 .container {
-    display: flex; /* or inline-flex */
+    display: flex;
+    /* or inline-flex */
     flex-direction: column;
     /* justify-content: center; */
-    align-items: center; 
+    align-items: center;
     padding: 20px
-  }
+}
 
 
- 
 
 
 
 .header__title {
     font-family: 'Work Sans', sans-serif;
     font-size: 4em;
-    
-    
+
+
 }
 
 .button__style {
@@ -71,10 +25,13 @@
     box-shadow: 5px 5px 5px #888888;
     background-color: aqua;
     border: 2px solid aqua;
-    
+    /* animation-duration: 3s; */
+    animation-delay: 1s; 
+    animation-iteration-count: 3;
+
 }
 
-.button__style:hover {    
+.button__style:hover {
     background-color: aquamarine;
     border: 2px solid aquamarine;
 }
@@ -89,16 +46,59 @@
 
 
 .div__style {
-    
+
     padding-bottom: 2em;
 }
 
 
 
 
+@media screen and (max-width: 800px) {
+
+    .responsive__img {
+        width: 80vw;
+        height: auto;
+    }
+
+    .header__title {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 2.5em;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+}
 
 
 
 
 
+@media screen and (max-width: 600px) {
+    .header {
+        align-items: center;
+        margin: auto;
+    }
 
+    .header__title {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 2.5em;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .responsive__img {
+        width: 100vw;
+        height: auto;
+    }
+
+    .button__style {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 1.6em;
+        border-radius: 22px;
+        box-shadow: 5px 5px 5px #888888;
+        background-color: aqua;
+        border: 2px solid aqua;
+
+    }
+}
