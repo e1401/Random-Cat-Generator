@@ -11,30 +11,21 @@ DOM.search__button.addEventListener("click", e => {
 
     fetchData(catApiURL);
     $(".results").empty()
-
-
 });
 
-// // Animation section start
-const element =  document.querySelector('.button__style')
-element.classList.add('animated', 'wobble')
+//  Animation section start
+const element = document.querySelector('.button__style');
+element.classList.add('animated', 'wobble');
 // Animation section end
-
 
 
 function fetchData() {
     fetch(catApiURL)
-
         .then(response => response.json())
-
         .then(data => {
             const catRandom =
-
                 document.createElement('div')
-
             catRandom.className = "results"
-
-
             data.forEach(cat => {
                 catRandom.innerHTML +=
                     `
